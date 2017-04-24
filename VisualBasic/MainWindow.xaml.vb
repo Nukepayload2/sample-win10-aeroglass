@@ -57,9 +57,8 @@ Partial Public Class MainWindow
             .SizeOfData = Marshal.SizeOf(accent),
             .Data = hGc.AddrOfPinnedObject
         }
-        hGc.Free()
-
         SetWindowCompositionAttribute(windowHelper.Handle, data)
+        hGc.Free()
     End Sub
 
 End Class
